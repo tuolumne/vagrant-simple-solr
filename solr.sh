@@ -15,4 +15,8 @@ tar -xzf /vagrant/solr-4.7.2.tgz -C /opt
 mv /opt/solr-4.7.2 /opt/solrInstall
 chmod -R g+w /opt/solrInstall 
 chown -R root:solr /opt/solrInstall
+tar -xzf data.tar.gz -C /opt/solrInstall/example/solr/collection1
 su - -c "export PATH=$PATH:/opt/jdk1.7.0_55/bin; cd /opt/solrInstall/example;java -jar start.jar" solr 2>&1 &
+
+#apt-get -y install curl
+
